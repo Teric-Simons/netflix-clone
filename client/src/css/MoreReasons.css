@@ -1,0 +1,35 @@
+.more-reasonsContainer h1 {
+    font-size: 22px;
+    color: white;
+   
+  }
+
+
+  .reasonFlex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  
+  }
+
+
+  .box{
+    width: 22%;
+    height: 125px;
+
+    border-radius: 15px;
+    padding: 12px;
+    background-color: var(--primaryColor);
+  }
+  .box svg{
+    width: 40px;
+  }
+
+
+  .box p{
+    font-weight: bold;
+    color: white;
+    font-size:15px;
+    height: 40px;
+  }

@@ -1,0 +1,196 @@
+.homepage {
+  background: linear-gradient(
+      0deg,
+      rgba(15, 15, 15, 255) 60%,
+      rgba(52, 26, 28, 0.99) 90%,
+      rgba(0, 0, 0, 0.99) 100%
+    ),
+    url("https://media.geeksforgeeks.org/wp-content/uploads/20240313102506/NetlfixHome-min.jpeg")
+      no-repeat center center fixed;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80px;
+  justify-content: space-between;
+}
+
+header img {
+  padding: 30px;
+  padding-top: 35px;
+  height: 84px;
+  margin-left: 6px;
+  object-fit: cover;
+}
+
+.right-header {
+  width: 22%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 30px;
+}
+
+.right-header button {
+  border: none;
+  padding: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 15px;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  font-size: 14px;
+  transition: opacity 0.5s;
+}
+
+.right-header button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+
+}
+
+.right-header select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  padding: 7px;
+  padding-left: 40px;
+  padding-right: 30px;
+  border-radius: 15px;
+  color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(39, 39, 39, 0.85);
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.right-header option {
+  background-color: white;
+  color: black;
+}
+
+.right-header select:active {
+  border: 1px solid white;
+}
+
+.right-buttons {
+  position: relative;
+}
+
+.right-buttons svg {
+  position: absolute;
+}
+
+.select-pos {
+  z-index: 100;
+  top: 7px;
+  left: 12px;
+  color: white;
+}
+.select-pos2 {
+  z-index: 100;
+  top: 7px;
+  right: 16px;
+  color: white;
+}
+
+
+
+
+
+.subscribe {
+  text-align: center;
+  color: white;
+}
+
+.subscribe input {
+  height: 30px;
+  width: 29%;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 16px;
+  margin-right: 5px;
+
+  color: white;
+
+  border: 1px solid white;
+  background-color: var(--primaryColor);
+}
+
+.subscribe input::placeholder {
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  vertical-align: center;
+  border-radius: 20px;
+  background-color: red;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+.subscribe svg {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.get-mem {
+  text-align: center;
+  margin-top: 40px;
+  color: white;
+}
+
+.get-mem button {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 13px;
+}
+
+.get-mem p {
+  margin: 0;
+}
+
+footer {
+  margin-top: 40px;
+
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 180px;
+  margin-top: 25px;
+}
+
+.footer-links li {
+  margin-bottom: 13px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.75);
+}

@@ -1,0 +1,219 @@
+.login-page {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  ),
+  url("https://media.geeksforgeeks.org/wp-content/uploads/20240313102506/NetlfixHome-min.jpeg")
+    no-repeat center center fixed;
+  
+
+
+
+
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+
+.form-body {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.login-card {
+  background-color: blue;
+  margin: 0 auto;
+  width: 320px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  padding: 30px 70px 143px 70px;
+}
+
+.login-card h1 {
+  color: white;
+  padding-bottom: 10px;
+}
+
+.userInput {
+  margin-bottom: 20px;
+  color: white;
+  position: relative;
+}
+
+.form-label{
+
+position: absolute;
+top: 24%;
+left:20px;
+color: #ffffffb8;
+transition: transform 0.3s ease;
+}
+.transformed {
+    transform: translateY(-50%) ;
+    font-size: 10px;
+}
+
+.userInput label:hover{
+    cursor: text;
+    
+}
+
+
+.userInput input {
+position: relative;
+  width: 100%;
+  height: 45px;
+  padding-top: 15px;
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
+  border-color: white;
+  outline: transparent;
+  text-indent: 18px;
+  z-index: 1; /* Ensure the input is above the label */
+}
+
+.userInput2 input::-webkit-input-placeholder {
+  font-size: 1rem;
+  color: #999;
+}
+
+.userInput2 input::-moz-placeholder {
+  font-size: 1rem;
+  color: #999;
+  text-indent: 40px;
+}
+
+.userInput2::placeholder {
+  font-size: 1rem;
+  color: #999;
+}
+
+
+.userInput input::-webkit-input-placeholder {
+  font-size: 1rem;
+  color: #999;
+}
+
+.userInput input::-moz-placeholder {
+  font-size: 1rem;
+  color: #999;
+  text-indent: 40px;
+}
+
+.userInput::placeholder {
+  font-size: 1rem;
+  color: #999;
+}
+
+.btn-login {
+  margin-top: 20px;
+  width: 100%;
+  padding: 13px;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+
+.remMe {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  color: white;
+  font-size: 1.05rem;
+  margin-bottom: 15px;
+}
+
+.remMe input{
+    width: 20px;
+    height: 20px;
+    padding: 12px;
+    margin-right: 15px;
+}
+.remMe div{
+    display: flex;
+    align-items: center;
+}
+
+
+.cLink {
+  color: #737373;
+}
+
+.sLink {
+  color: white;
+  text-decoration: none;
+}
+
+.sLink:hover {
+  text-decoration: underline;
+}
+
+.fb {
+  color: #3b5998;
+  margin-right: 6px;
+  font-size: 20px;
+}
+
+.fb {
+  text-decoration: none;
+  margin-left: 10px;
+  font-size: 0.8rem;
+}
+.login2 {
+  margin: 50px 0 15px 0;
+  vertical-align: middle;
+  color: #8c8c8c;
+}
+
+.signUp {
+  margin-bottom: 10px;
+  color: #8c8c8c;
+}
+
+.google {
+  font-size: 0.8rem;
+  color: #8c8c8c;
+  margin-top: 20px;
+}
+
+.google a {
+  text-decoration: none;
+}
+
+.google a:hover {
+  text-decoration: underline;
+}
+
+.footer-color{
+    background-color: rgba(0, 0, 0, 1);
+    padding: 30px;
+}
+
+.tel-link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+  
+}
+
+.tel-link:hover {
+    text-decoration: underline;
+}
+
+.forgot{
+    color: white;
+    text-align: center;
+}
+
+.login-noti{
+  color: red;
+  opacity: 0.8;
+  margin-top: 10px;
+}
