@@ -22,10 +22,10 @@ header {
 }
 
 header img {
-  padding: 30px;
-  padding-top: 35px;
+  padding: 1.875em;
+  padding-top: 2.1875em;
   height: 84px;
-  margin-left: 6px;
+  margin-left: 0.375em;
   object-fit: cover;
 }
 
@@ -35,26 +35,27 @@ header img {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-right: 30px;
+  padding-right: 1.875em;
+  min-width: 240px; /* Set a minimum width */
 }
 
 .right-header button {
   border: none;
-  padding: 7px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0.4375em;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+  width: 90px;
   border-radius: 15px;
   font-weight: bold;
   color: black;
   background-color: white;
-  font-size: 14px;
+  font-size: 0.875rem;
   transition: opacity 0.5s;
 }
 
 .right-header button:hover {
   cursor: pointer;
   opacity: 0.7;
-
 }
 
 .right-header select {
@@ -62,14 +63,15 @@ header img {
   -moz-appearance: none;
   appearance: none;
   border: none;
-  padding: 7px;
-  padding-left: 40px;
-  padding-right: 30px;
+  padding: 0.4375em;
+  padding-left: 2.5em;
+  padding-right: 1.875em;
   border-radius: 15px;
   color: rgba(255, 255, 255, 0.95);
   background-color: rgba(39, 39, 39, 0.85);
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: 1px;
+  width: 100%;
 }
 
 .right-header option {
@@ -102,31 +104,30 @@ header img {
   color: white;
 }
 
-
-
-
-
 .subscribe {
   text-align: center;
   color: white;
+}
+.email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .subscribe input {
   height: 30px;
   width: 29%;
-  padding: 10px;
+  padding: 0.625em;
   border-radius: 20px;
-  font-size: 16px;
-  margin-right: 5px;
-
+  font-size: 1rem;
+  margin-right: 0.3125em;
   color: white;
-
   border: 1px solid white;
   background-color: var(--primaryColor);
 }
 
 .subscribe input::placeholder {
-  padding: 10px;
+  padding: 0.625em;
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -135,32 +136,32 @@ header img {
   align-items: center;
   justify-content: center;
   border: none;
-  padding: 10px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 0.405em;
+  padding-left: 1.3em;
+  padding-right: 1.3em;
   vertical-align: center;
-  border-radius: 20px;
+  border-radius: 25px;
   background-color: red;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-weight: bold;
   color: white;
 }
 
 .subscribe svg {
-  margin-top: 5px;
-  margin-left: 10px;
+  margin-top: 0.3125em;
+  margin-left: 0.625em;
 }
 
 .get-mem {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 2.5em;
   color: white;
 }
 
 .get-mem button {
-  font-size: 16px;
+  font-size: 1rem;
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 0.8125em;
 }
 
 .get-mem p {
@@ -168,8 +169,7 @@ header img {
 }
 
 footer {
-  margin-top: 40px;
-
+  margin-top: 2.5em;
   color: rgba(255, 255, 255, 0.75);
 }
 
@@ -183,14 +183,32 @@ footer {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-right: 180px;
-  margin-top: 25px;
+  margin-right: 11.25em;
+  margin-top: 1.5625em;
 }
 
 .footer-links li {
-  margin-bottom: 13px;
+  margin-bottom: 0.8125em;
 }
 
 .footer-links a {
   color: rgba(255, 255, 255, 0.75);
+}
+
+@media (max-width: 900px) {
+  .email {
+    flex-direction: column;
+  }
+  .subscribe input {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  .button {
+    font-size: 1.0625rem;
+  }
+  .footer-links {
+    flex-direction: column;
+    align-items: start;
+  }
 }

@@ -1,183 +1,211 @@
 .movie-scrollView-container {
-    padding: 30px;
-    padding-top: 0px;
-  }
-  .movie-scrollView {
-    position: relative;
-    margin-left: 6px;
-    border-radius: 16px;
-    width: 100%;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    border: 1px solid white;
-  }
+  padding: 1.875em; /* 30px / 16px = 1.875 */
+  padding-top: 0;
+}
 
- 
+.movie-scrollView {
+  position: relative;
+  margin-left: 0.375em; /* 6px / 16px = 0.375 */
+  border-radius: 16px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid white;
+}
 
-.hidden{
+.hidden {
   opacity: 0;
 }
 
-
- .lighter{
-  
-    background:
-    linear-gradient(
+.lighter {
+  background: linear-gradient(
       0deg,
       rgba(190, 170, 170, 0.2) 0%,
       rgba(0, 0, 0, 0.1) 25.5%
     ),
     var(--background-image);
-    background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
   border-radius: 16px;
   transition: opacity 1s linear;
   opacity: 1;
-  
- }
+}
 
-.test{
-  background:
-  linear-gradient(
-    0deg,
-    rgba(190, 170, 170, 0.2) 0%,
-    rgba(0, 0, 0, 0.5) 25.5%
-  ),
-  var(--background-image);
+.test {
+  background: linear-gradient(
+      0deg,
+      rgba(190, 170, 170, 0.2) 0%,
+      rgba(0, 0, 0, 0.5) 25.5%
+    ),
+    var(--background-image);
   background-size: 100% 100%;
-background-repeat: no-repeat;
-width: 100%;
-border-radius: 16px;
-transition: opacity 1s linear;
-opacity: 1;
 
+  background-repeat: no-repeat;
+  width: 100%;
+  border-radius: 16px;
+  transition: opacity 1s linear;
+  opacity: 1;
 }
 
-  .slider-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 35px;
-    width: 50%;
-    z-index: 100;
-    text-align: center;
-  }
-  
-  .slider-info h1 {
-    color: white;
-    font-size: 50px;
-    margin: 0;
-  }
-  
-  .movie-scrollView button:hover {
-    opacity: 0.5;
-    cursor: pointer;
-  }
-  
-  .left-arrow {
-    left: 10px;
-    top: 40%;
-    position: absolute;
-    height: 20%;
-    border-radius: 15px;
-    padding: 0;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: rgb(255, 255, 255);
-    border: none;
-    z-index: 100;
-    transition: opacity 0.5s;
-  }
-  
-  .right-arrow {
-    right: 10px;
-    top: 40%;
-    position: absolute;
-    height: 75px;
-    border-radius: 15px;
-    padding: 0;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: rgb(255, 255, 255);
-    border: none;
-    z-index: 100;
-    transition: opacity 0.5s;
-  }
+.slider-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 2.1875em; /* 35px / 16px = 2.1875 */
+  width: 80%;
+  z-index: 100;
+  text-align: center;
+}
 
+.slider-info h1 {
+  color: white;
+  font-size: 3.125rem; /* 50px / 16px = 3.125 */
+  margin: 0;
+}
 
-  .slider-info2{
-    display: flex;
-    flex-direction: column;
- 
- 
-    color: white;
-    position: absolute;
-    left: 70px;
-    bottom: 0;
-    margin-bottom: 35px;
+.movie-scrollView button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.left-arrow {
+  left: 0.625em; /* 10px / 16px = 0.625 */
+  top: 40%;
+  position: absolute;
+  height: 20%;
+  border-radius: 15px;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(255, 255, 255);
+  border: none;
+  z-index: 100;
+  transition: opacity 0.5s;
+}
+
+.right-arrow {
+  right: 0.625em; /* 10px / 16px = 0.625 */
+  top: 40%;
+  position: absolute;
+  height: 75px;
+  border-radius: 15px;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(255, 255, 255);
+  border: none;
+  z-index: 100;
+  transition: opacity 0.5s;
+}
+
+.slider-info2 {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  position: absolute;
+  left: 4.375em; /* 70px / 16px = 4.375 */
+  bottom: 0;
+  margin-bottom: 2.1875em; /* 35px / 16px = 2.1875 */
   width: 50%;
-    z-index: 100;
-    top:35px
-  
-  }
-
-  .slider-logo{
-    width: 14%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .slider-logo p{
- color: rgba(255, 255, 255, 0.5);
- font-weight: bold;
- font-size: 13px;
- letter-spacing: 4px;
-
-  }
-
-  .slider-logo svg{
-    width: 15px;
-   
-  }
-
- .name{
-    text-align: center;
-    width: 35%;
-    font-style: italic;
-
- }
-  .name h1{
-   
-    font-size: 25px;
-    margin: 0;
-    padding: 0;
-  }
-  .name p{
-   
-    font-size: 38px;
-    margin: 0;
-    margin-top: -10px;
-    padding: 0;
-  }
-
-.slider-top{
-  margin-bottom: 90px;
+  z-index: 100;
+  top: 2.1875em; /* 35px / 16px = 2.1875 */
 }
- .slider-info2 ul{
-  flex-direction: row;
-display: flex;
-align-items: center;
-justify-content: space-between;
-margin :0;
-padding: 0;
-width: 60%;
- }
 
- .slider-info2 ul li:first-child{
- list-style-type: none;
- }
+.slider-logo {
+  width: 14%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-logo p {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  font-size: 0.8125rem; /* 13px / 16px = 0.8125 */
+  letter-spacing: 0.25em; /* 4px / 16px = 0.25 */
+}
+
+.slider-logo svg {
+  width: 15px;
+}
+
+.name {
+  text-align: center;
+  width: 35%;
+  font-style: italic;
+}
+
+.name h1 {
+  font-size: 1.5625rem; /* 25px / 16px = 1.5625 */
+  margin: 0;
+  padding: 0;
+}
+
+.name p {
+  font-size: 2.375rem; /* 38px / 16px = 2.375 */
+  margin: 0;
+  margin-top: -0.625em; /* -10px / 16px = -0.625 */
+  padding: 0;
+}
+
+.slider-top {
+  margin-bottom: 5.625em; /* 90px / 16px = 5.625 */
+}
+
+.slider-info2 ul {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  width: 60%;
+}
+
+.slider-info2 ul li:first-child {
+  list-style-type: none;
+}
+
+@media (max-width: 900px) {
+  .slider-info h1 {
+    font-size: 2.125rem; /* 50px / 16px = 3.125 */
+  }
+
+  .description {
+    opacity: 0;
+  }
+
+  .slider-logo {
+    opacity: 0;
+  }
+
+  .name {
+    width: 100%;
+  }
+
+  .slider-info2 {
+    width: 100%;
+
+    justify-content: flex-end;
+    padding: 0;
+    height: auto;
+
+    left: 0;
+  }
+  .slider-info2 ul {
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -90px;
+    font-weight: bold;
+  }
+  .slider-top {
+    margin-bottom: 0;
+  }
+}

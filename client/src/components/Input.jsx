@@ -12,14 +12,14 @@ const Input = (props) => {
 
   return (
     <>
-      <label 
+      <label
         className={`form-label ${isFocused ? "transformed" : ""}`}
         htmlFor={id}
       >
-       {props.label}
+        {props.label}
       </label>
 
-      <input {...props} onFocus={handleFocus}/>
+      <input {...props} onFocus={handleFocus} />
     </>
   );
 };

@@ -2,14 +2,13 @@ import { useState } from "react";
 import "../css/FAQ.css";
 import FAQListing from "./FAQListing";
 const FAQ = () => {
-    const [openIndex, setOpenIndex] = useState(null);
-    
-    const handleToggle = (index) => {
-        setOpenIndex(index === openIndex ? null : index);
-      };
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const handleToggle = (index) => {
+    setOpenIndex(index === openIndex ? null : index);
+  };
   const questions = [
     {
-    
       question: "What is Netflix?",
       answer:
         "Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
@@ -41,20 +40,18 @@ const FAQ = () => {
     },
   ];
 
-
-  
   return (
     <div className="FAQ-container">
       <h1>More Reasons to Join</h1>
       {questions.map((question, index) => (
         <div>
-         <FAQListing
-          key={index}
-          isOpen={index === openIndex}
-          onToggle={() => handleToggle(index)}
-          question={question.question}
-          answer={question.answer}
-        />
+          <FAQListing
+            key={index}
+            isOpen={index === openIndex}
+            onToggle={() => handleToggle(index)}
+            question={question.question}
+            answer={question.answer}
+          />
         </div>
       ))}
     </div>

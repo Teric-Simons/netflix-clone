@@ -6,15 +6,15 @@ import FAQ from "./FAQ";
 import MovieSlider from "./MovieSlider";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import {shuffleArray} from "../util.js";
-import { db, collection, getDocs } from '../firebase';
+import { shuffleArray } from "../util.js";
+import { db, collection, getDocs } from "../firebase";
 
 const HomePage = () => {
   const [movies, setMovies] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-/*  useEffect(() => {
+  /*  useEffect(() => {
     const fetchMovies = async () => {
       try {
         const response = await axios.get("http://localhost:5000/api/getMovies");
@@ -32,56 +32,50 @@ const HomePage = () => {
     console.log(movies);
   }, []);
 */
-useEffect(() => {
-  console.log("here")
-  const fetchMovies = async () => {
-    try {
-      const moviesCollection = collection(db, 'Movies');
-      const moviesSnapshot = await getDocs(moviesCollection);
-      const moviesList = moviesSnapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-      }));
-      console.log(moviesList);
-      setMovies(moviesList);
-    } catch (error) {
-      console.error("Error fetching movies:", error);
-      setError(error);
-    } finally {
-      setLoading(false);
+  useEffect(() => {
+    console.log("here");
+    const fetchMovies = async () => {
+      try {
+        const moviesCollection = collection(db, "Movies");
+        const moviesSnapshot = await getDocs(moviesCollection);
+        const moviesList = moviesSnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        console.log(moviesList);
+        setMovies(moviesList);
+      } catch (error) {
+        console.error("Error fetching movies:", error);
+        setError(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchMovies();
+  }, []);
+
+  useEffect(() => {
+    if (!loading) {
+      console.log(movies);
     }
+  }, [loading]);
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/login");
   };
 
-  fetchMovies();
-}, []);
-
-useEffect(() => {
-  if (!loading) {
-    console.log(movies);
+  if (loading) {
+    return;
   }
-}, [loading]);
 
-const navigate = useNavigate();
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
-const handleClick = () => {
-  navigate("/login");
-
- 
-};
-
-if (loading) {
-  return;
-}
-
-if (error) {
-  return <div>Error: {error.message}</div>;
-}
-
-
-
-
- 
-  const shuffledMovies1 =  shuffleArray(movies);
+  const shuffledMovies1 = shuffleArray(movies);
   const shuffledMovies2 = shuffleArray(movies);
 
   return (
@@ -145,6 +139,9 @@ if (error) {
             Ready to watch? Enter your email to create or restart your
             membership.
           </p>
+          <div className="email">
+
+         
           <input type="text" placeholder="Email address" />
 
           <button className="button">
@@ -170,10 +167,17 @@ if (error) {
               </svg>
             </span>
           </button>
+          </div>
         </div>
         <div className="second-section">
-          <RowListing title="Trending Now" movies={shuffledMovies1.slice(0,10)} />
-          <RowListing title="Only on Netflix" movies={shuffledMovies2.slice(0,10)} />
+          <RowListing
+            title="Trending Now"
+            movies={shuffledMovies1.slice(0, 10)}
+          />
+          <RowListing
+            title="Only on Netflix"
+            movies={shuffledMovies2.slice(0, 10)}
+          />
           <MoreReasons />
           <FAQ />
 

@@ -4,7 +4,6 @@ import Input from "./Input";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-
 const LoginPage = () => {
   const navigate = useNavigate();
   const [form, setForm] = useState({
@@ -36,18 +35,16 @@ const LoginPage = () => {
   };
 
   */
- 
+
   /**for deployment(static) purposes */
   const handleSubmit = async (e) => {
     e.preventDefault();
     const email = form.email;
     const pass = form.password;
-    if(email ==="test@gmail.com" && pass ==="test"){
+    if (email === "test@gmail.com" && pass === "test") {
       navigate("/user-page");
-
     }
-
-  }
+  };
 
   return (
     <div className="login-page">
