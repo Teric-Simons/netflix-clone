@@ -31,3 +31,6 @@ A Netflix clone built with Express.js and Firebase. This project includes a home
    ```bash
    git clone https://github.com/your-username/netflix-clone.git
    cd netflix-clone
+   cd client
+   npm install
+   npm start
