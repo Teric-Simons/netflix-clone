@@ -21,13 +21,12 @@
 
 .form-body {
   width: 90%;
-  margin: 0 auto;
+
 }
 
 .login-card {
-  background-color: blue;
   margin: 0 auto;
-  width: 320px;
+  width: 50%;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 5px;
   padding: 30px 70px 143px 70px;
@@ -216,4 +215,12 @@ position: relative;
   color: red;
   opacity: 0.8;
   margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+
+
+  .userInput input {
+    min-width: 200px;
+  }
 }

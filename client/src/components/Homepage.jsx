@@ -81,6 +81,7 @@ const HomePage = () => {
   return (
     <div className="homepage">
       <header>
+        <div className="header-wrapper">
         <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240313101431/Netflix-Logo.png" />
 
         <div className="right-header">
@@ -128,6 +129,7 @@ const HomePage = () => {
           </div>
 
           <button onClick={handleClick}>Sign In</button>
+        </div>
         </div>
       </header>
 

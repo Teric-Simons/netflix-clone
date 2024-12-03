@@ -14,18 +14,26 @@
 }
 
 header {
+width: 96%;
+margin-left: auto;
+margin-right: auto;
+}
+
+.header-wrapper{
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 80px;
   justify-content: space-between;
+  
+
 }
 
 header img {
   padding: 1.875em;
   padding-top: 2.1875em;
   height: 84px;
-  margin-left: 0.375em;
+padding-left: 0;
   object-fit: cover;
 }
 
@@ -34,9 +42,11 @@ header img {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding-right: 1.875em;
-  min-width: 240px; /* Set a minimum width */
+  justify-content: flex-end;
+ 
+
+ flex: 1;
+gap: 10px;
 }
 
 .right-header button {
@@ -211,4 +221,12 @@ footer {
     flex-direction: column;
     align-items: start;
   }
+
+  header img {
+   
+height: 60%;
+
+  }
+
+
 }
